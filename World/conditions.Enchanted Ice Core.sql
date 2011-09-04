@@ -1,0 +1,2 @@
+DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId`=18 AND `SourceGroup`=0 AND `SourceEntry`=33607 AND `ElseGroup`=0 AND `ConditionTypeOrReference`=24 AND `ConditionValue1`=2 AND `ConditionValue2`=23876 AND `ConditionValue3`=0 LIMIT 1;
+INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES (17, 0, 43354, 0, 19, 23876, 0, 0, 0, '', NULL);

@@ -1,0 +1,12 @@
+UPDATE `creature_template` SET `name`= 'Bastionsfrostwyrm' WHERE `entry` = 38444;
+UPDATE `creature_template` SET `name`= 'Bastionsfrostwyrm' WHERE `entry` = 3723002;
+UPDATE `creature_template` SET `name`= 'Bastionsfrostwyrm' WHERE `entry` = 3723003;
+UPDATE `creature_template` SET `dmg_multiplier`= '13' WHERE `entry` = 38444;
+UPDATE `creature_template` SET `dmg_multiplier`= '26' WHERE `entry` = 3723002;
+UPDATE `creature_template` SET `dmg_multiplier`= '52' WHERE `entry` = 3723003;
+UPDATE `creature_template` SET `mingold`= '271134' WHERE `entry` = 38444;
+UPDATE `creature_template` SET `maxgold`= '271134' WHERE `entry` = 38444;
+UPDATE `creature_template` SET `mingold`= '271134' WHERE `entry` = 3723002;
+UPDATE `creature_template` SET `maxgold`= '271134' WHERE `entry` = 3723002;
+UPDATE `creature_template` SET `mingold`= '271134' WHERE `entry` = 3723003;
+UPDATE `creature_template` SET `maxgold`= '271134' WHERE `entry` = 3723003;
