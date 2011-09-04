@@ -1,7 +1,3 @@
-/*
-	Grube von Saron (5er Instanz)
-*/
-
 -- [36494] Forgemaster Garfrost (15)
 UPDATE `creature_template` SET `LootID`= 36494 WHERE `entry` = 36494;
 UPDATE `creature_template` SET `LootID`= 37613 WHERE `entry` = 37613;
@@ -36,7 +32,6 @@ INSERT INTO `reference_loot_template` (`entry`,`item`,`ChanceOrQuestChance`,`gro
 (3649402, 50379, 0, 1, 1, 1), /* (1) Battered Hilt (Alliance) */			
 (3649402, 50380, 0, 1, 1, 1); /* (1) Battered Hilt (Horde) */
 
-
 -- [36476] Ick (14)
 UPDATE `creature_template` SET `LootID`= 36476 WHERE `entry` = 36476;
 UPDATE `creature_template` SET `LootID`= 37627 WHERE `entry` = 37627;
@@ -68,7 +63,6 @@ INSERT INTO `reference_loot_template` (`entry`,`item`,`ChanceOrQuestChance`,`gro
 (3647602, 50266, 0, 1, 1, 1), /* (232) Ancient Polar Bear Hide */			
 (3647602, 50379, 0, 1, 1, 1), /* (1) Battered Hilt (Alliance) */			
 (3647602, 50380, 0, 1, 1, 1); /* (1) Battered Hilt (Horde) */
-
 
 -- [36658] Scourgelord Tyrannus (27)
 UPDATE `creature_template` SET `LootID`= 36658 WHERE `entry` = 36658;

@@ -1,4 +1,4 @@
-﻿UPDATE `command` SET `help`='Syntax: .account\n Zeigt die Berechtigungsstufe Ihres Accounts an.' WHERE (`name`='account');
+UPDATE `command` SET `help`='Syntax: .account\n Zeigt die Berechtigungsstufe Ihres Accounts an.' WHERE (`name`='account');
 UPDATE `command` SET `help`='Syntax: .account addon $addon\n Setzt die für diesen Account erlaubten Erweiterungen. Zulässige Werte: 0 - normal, 1 - The Burning Crusade, 2 - Wrath of the Lich King' WHERE (`name`='account addon');
 UPDATE `command` SET `help`='Syntax: .account create $account $password\n Erstellt einen Account mit angegebenem Passwort.' WHERE (`name`='account create');
 UPDATE `command` SET `help`='Syntax: .account delete $account\n Löscht Account mit allen Charakteren.' WHERE (`name`='account delete');

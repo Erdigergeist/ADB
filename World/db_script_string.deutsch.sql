@@ -1,5 +1,4 @@
-﻿
-UPDATE `db_script_string` SET `content_loc3` = NULL;
+﻿UPDATE `db_script_string` SET `content_loc3` = NULL;
 UPDATE `db_script_string` SET `content_loc3`='Gehe in den Ring des Blutes, $N. Der Kampf wird bald beginnen!' WHERE (`entry`='2000000001');
 UPDATE `db_script_string` SET `content_loc3`='Der Kampf wird bald beginnen!' WHERE (`entry`='2000000002');
 UPDATE `db_script_string` SET `content_loc3`='$N gegen den grausamen Grollhuf, Schmetterzehe!' WHERE (`entry`='2000000003');

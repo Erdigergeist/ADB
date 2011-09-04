@@ -1561,4 +1561,3 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `G
 (3721703, 36679, 1.4, 0, 1, 1), /* (170) Singing Dagger */
 (3721703, 36541, 1.76, 0, 1, 1), /* (178) Wintry Claymore */
 (3721703, 36166, 1.03, 0, 1, 1); /* (178) Webspinner Gloves */
-
