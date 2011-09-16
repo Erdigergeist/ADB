@@ -1,1 +1,0 @@
-UPDATE gameobject SET spawntimesecs = CEIL(7200+(RAND()*21600)) WHERE map = 571 AND id IN (189973, 189980, 189981, 190170, 190171, 190172, 190173, 190175, 190176, 191019, 191303, 191133, 195036);  -- Setzt Spawntime auf eine Variable zwischen 2h-8h

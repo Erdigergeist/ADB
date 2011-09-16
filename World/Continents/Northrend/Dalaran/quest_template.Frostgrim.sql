@@ -1,0 +1,2 @@
+UPDATE `quest_template` SET `RequiredRaces`='1101' WHERE entry IN (24510,24499,24683,24683,24710,24711);
+UPDATE `quest_template` SET `RequiredRaces`='690' WHERE entry IN (24506,24511,24682,24507,24712,24713);

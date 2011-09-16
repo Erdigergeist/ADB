@@ -1,2 +1,0 @@
-UPDATE creature_template SET `npcflag` = '1' WHERE `entry` = '37200';
-UPDATE creature_template SET `faction_A` = '35', `faction_H` = '35' WHERE `entry` IN (37200, 3720001, 37830, 3783001, 37189, 3718901, 37187, 3718701, 37187, 3718701, 37920, 3792001);

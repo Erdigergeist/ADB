@@ -1,1 +1,0 @@
-Update creature_template set mindmg='300', maxdmg='400', attackpower='24', dmg_multiplier='7.5', minrangedmg='300', maxrangedmg='400' where entry='31283';

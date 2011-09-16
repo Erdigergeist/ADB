@@ -1,0 +1,1 @@
+Update quest_template set ReqCreatureOrGOId1='29124' where entry='12805';

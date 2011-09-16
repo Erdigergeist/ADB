@@ -1,2 +1,0 @@
-insert into `fishing_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount`) values('4560','43698','0.1','1','0','1','1');
-insert into `fishing_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `lootmode`, `groupid`, `mincountOrRef`, `maxcount`) values('4560','45903','-20','1','0','1','1');

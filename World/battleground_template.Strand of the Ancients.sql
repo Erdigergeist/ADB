@@ -1,1 +1,0 @@
-Update battleground_template set MinPlayersPerTeam = 1000, MaxPlayersPerTeam = 1000 where id = 9;

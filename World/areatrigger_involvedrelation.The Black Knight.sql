@@ -1,1 +1,0 @@
-insert into `areatrigger_involvedrelation` (`id`, `quest`) values('5500','14016');  

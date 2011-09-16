@@ -1,1 +1,0 @@
-UPDATE item_template SET spellid_1 = 67378 WHERE entry = 47664;

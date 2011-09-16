@@ -1,0 +1,3 @@
+INSERT INTO `gameobject_template`(`entry`, `type`, `displayId`, `name`, `faction`, `size`, `data2`, `data3`) VALUES (10000002 , 6, 621 , 'Event-slower', 35, 1 , 3, 70739);
+INSERT INTO `gameobject_template`(`entry`, `type`, `displayId`, `name`, `faction`, `size`, `data2`, `data3`) VALUES (10000000 , 6, 621 , 'Event-turbo', 35, 1 , 3, 22590);
+INSERT INTO `gameobject_template`(`entry`, `type`, `displayId`, `name`, `faction`, `size`) VALUES (10000001 , 6, 621 , 'Event-Dummy', 35, 1);
