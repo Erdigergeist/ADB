@@ -1,0 +1,1 @@
+insert into `pool_template` (`entry`, `max_limit`, `description`) values('974','40','MASTER Herbs Netherstorm zone 3523');
