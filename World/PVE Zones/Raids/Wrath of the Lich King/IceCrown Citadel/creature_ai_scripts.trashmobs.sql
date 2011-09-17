@@ -47,10 +47,10 @@ INSERT INTO `creature_ai_scripts` VALUES
 ('3766407', '37664', '0', '6', '100', '31', '10000', '14000', '10000', '14000', '11', '71153', '5', '1', '', '', '', '', '', '', '', '', 'Darkfallen Archmage - Polymorph');
 
 -- Sinistrer Blutritter
-DELETE FROM `smart_scripts` WHERE (`entryorguid`=37595 AND `source_type`=0);
-INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES 
-(37595, 0, 0, '', 63, 0, 100, 30, '', '', '', '', 11, 71736, '', '', '', '', '', 1, '', '', '', '', '', '', '', ''),
-(37595, 0, 1, '', 0, 0, 100, 30, 7000, 7000, '', '', 11, 70437, '', '', '', '', '', 2, '', '', '', '', '', '', '', '');
+DELETE FROM `creature_ai_scripts` WHERE (`creature_id`='37595');
+INSERT INTO `creature_ai_scripts` VALUES 
+('3759501', '37595', '11', '6', '100', '31', '', '', '', '', '11', '71736', '0', '1', '', '', '', '', '', '', '', '', 'Darkfallen Blood Knight - Vampiric Aura'),
+('3759502', '37595', '0', '6', '100', '31', '7000', '7000', '7000', '7000', '11', '70437', '1', '1', '', '', '', '', '', '', '', '', 'Darkfallen Blood Knight - Unholy Strike');
 
 -- Sinistrer Kommandant
 DELETE FROM `smart_scripts` WHERE (`entryorguid`=37662 AND `source_type`=0);
