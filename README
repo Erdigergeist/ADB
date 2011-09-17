@@ -1,9 +1,9 @@
-Copyright (C) AliveCore-Database (http://www.wow-alive.de/)
+Copyright (C) Alive-Database (http://www.wow-alive.de/)
 
   AliveCore-Database is a German Database for ALiveCore. AliveCore 
   is free software; you can redistribute it and/or modify it under
-   the terms of the GNU General Public License as published by the
-   Free Software Foundation; either version 2 of the License, or
+  the terms of the GNU General Public License as published by the
+  Free Software Foundation; either version 2 of the License, or
   (at your option) any later version.
 
   This program is distributed in the hope that it will be useful,
@@ -25,7 +25,7 @@ Copyright (C) AliveCore-Database (http://www.wow-alive.de/)
   file, but you are not obligated to do so.  If you do not wish to do
   so, delete this exception statement from your version.
 
-ALiveCore is a World of Warcraft game server emulator like Trinity Core
+Alive-Database is a World of Warcraft Database like Trinity Database
 and is based on the code of that project. We use some modifications of 
 the GTDB-Crew.
 
@@ -46,6 +46,6 @@ the GTDB-Crew.
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.     #
 #############################################################################
 
-ALiveCore is The Core of the WoW-ALive Projekt.
+Alive-Database is The Database of the WoW-ALive Projekt.
 Only ALive Devs an Admins have the right to Clone this Repo.
 Do not Fork without asking.
