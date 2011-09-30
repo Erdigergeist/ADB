@@ -1,5 +1,5 @@
 -- Immunity Mask
-UPDATE `creature_template` SET `mechanic_immune_mask` = '654311423' WHERE `entry` = '28366';	-- Set all immunities
+UPDATE `creature_template` SET `mechanic_immune_mask` = '804257791' WHERE `entry` = '28366';	-- Set all immunities
 
 -- Set 0 movementspeed
 UPDATE `creature_template` SET `speed_walk` = '0', `speed_run` = '0' WHERE `entry` = '28366';
