@@ -1,25 +1,25 @@
 SET @Gossip=21276;
-SET @Azuregos=15481; -- Spirit of Azuregos
-SET @Item=20949; -- Magical Ledger
+SET @Azuregos=15481;
+SET @Item=20949;
 UPDATE `creature_template` SET `gossip_menu_id`=@Gossip, `AIName`='SmartAI' WHERE `entry`=@Azuregos;
 
 DELETE FROM `gossip_menu` WHERE (`entry` BETWEEN @Gossip AND @Gossip+12) AND `text_id` IN (7881,7901,7885,7886,7887,7888,7889,7890,7891,7892,7893,7894,7895,7896,7897);
 INSERT INTO `gossip_menu` (`entry`, `text_id`) VALUES
-(@Gossip+00, 7881), -- gossip if no quest nor item
-(@Gossip+00, 7901), -- gossip if item
-(@Gossip+00, 7885), -- 01
-(@Gossip+01, 7886), -- 02
-(@Gossip+02, 7887), -- 03
-(@Gossip+03, 7888), -- 04
-(@Gossip+04, 7889), -- 05
-(@Gossip+05, 7890), -- 06
-(@Gossip+06, 7891), -- 07
-(@Gossip+07, 7892), -- 08
-(@Gossip+08, 7893), -- 09
-(@Gossip+09, 7894), -- 10
-(@Gossip+10, 7895), -- 11
-(@Gossip+11, 7896), -- 12
-(@Gossip+12, 7897); -- 13
+(@Gossip+00, 7881),
+(@Gossip+00, 7901), 
+(@Gossip+00, 7885), 
+(@Gossip+01, 7886), 
+(@Gossip+02, 7887), 
+(@Gossip+03, 7888), 
+(@Gossip+04, 7889), 
+(@Gossip+05, 7890), 
+(@Gossip+06, 7891), 
+(@Gossip+07, 7892), 
+(@Gossip+08, 7893),
+(@Gossip+09, 7894),
+(@Gossip+10, 7895),
+(@Gossip+11, 7896),
+(@Gossip+12, 7897);
 
 DELETE FROM `gossip_menu_option` WHERE `menu_id` BETWEEN @Gossip AND @Gossip + 14;
 INSERT INTO `gossip_menu_option` (`menu_id`,`id`,`option_text`,`option_id`,`npc_option_npcflag`,`action_menu_id`) VALUES
