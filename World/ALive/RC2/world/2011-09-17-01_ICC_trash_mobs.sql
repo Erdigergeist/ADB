@@ -166,7 +166,7 @@ INSERT INTO `creature_ai_scripts` VALUES
 DELETE FROM `creature_ai_scripts` WHERE (`creature_id`='37023');
 INSERT INTO `creature_ai_scripts` VALUES 
 ('3702301', '37023', '0', '6', '100', '31', '13000', '17000', '13000', '17000', '11', '71103', '1', '1', '', '', '', '', '', '', '', '', 'Plague Scientist - Combobulating Spray'),
-('3702302', '37023', '0', '6', '100', '31', '60000', '10000', '6000', '10000', '11', '73079', '4', '1', '', '', '', '', '', '', '', '', 'Plague Scientist - Plague Blast'),
+('3702302', '37023', '0', '6', '100', '31', '6000', '10000', '6000', '10000', '11', '73079', '4', '1', '', '', '', '', '', '', '', '', 'Plague Scientist - Plague Blast'),
 ('3702303', '37023', '0', '6', '100', '31', '25000', '29000', '25000', '29000', '11', '69871', '1', '1', '', '', '', '', '', '', '', '', 'Plague Scientist - Plague Stream');
 
 -- Eiternder Schrecken
@@ -199,7 +199,7 @@ INSERT INTO `creature_ai_scripts` VALUES
 -- Die Verdammten
 DELETE FROM `creature_ai_scripts` WHERE (`creature_id`='37011');
 INSERT INTO `creature_ai_scripts` VALUES 
-('3701101', '37011', '0', '6', '100', '31', '10000', '14000', '10000', '14000', '11', '70960', '0', '1', '', '', '', '', '', '', '', '', 'The Damned - Bone Flurry'),
+('3701101', '37011', '0', '6', '100', '31', '10000', '14000', '10000', '14000', '11', '70960', '0', '0', '', '', '', '', '', '', '', '', 'The Damned - Bone Flurry'),
 ('3701102', '37011', '6', '6', '100', '31', '', '', '', '', '11', '70961', '0', '1', '', '', '', '', '', '', '', '', 'The Damned - Shattered Bones');
 
 -- Use AI
