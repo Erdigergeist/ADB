@@ -1,4 +1,3 @@
--- For Achievement Champion/Conqueror of Ulduar
 DELETE FROM achievement_criteria_data WHERE `type` = 18 AND criteria_id IN
 (10042,10342,10340,10341,10598,10348,10351,10439,
 10403,10582,10347,10349,10350,
@@ -40,16 +39,10 @@ DELETE FROM disables WHERE sourceType = 4 AND entry IN
 10352,10355,10353,10354,10599,10357,10363,10719,
 10404,10583,10361,10362,10364);
 
--- ##########################################################
--- Flame Leviathan
--- ##########################################################
 UPDATE `creature_template` SET `ScriptName` = 'npc_liquid_pyrite' WHERE `entry` = '33189';
 DELETE FROM `spell_script_names` WHERE `spell_id` = '62363';
 INSERT INTO `spell_script_names` (`spell_id`, `ScriptName`) VALUES ('62363', 'spell_anti_air_rocket');
 
--- ##########################################################
--- Ignis
--- ##########################################################
 DELETE FROM conditions WHERE SourceEntry IN (62488);
 INSERT INTO conditions
 (SourceTypeOrReferenceId,SourceGroup,SourceEntry,ElseGroup,
@@ -71,11 +64,6 @@ INSERT INTO `spell_linked_spell` (`spell_trigger`,`spell_effect`,`type`,`comment
 (62382,-65667,2, 'Iron Construct - immune to Heat when Brittle'),
 (67114,-65667,2, 'Iron Construct - immune to Heat when Brittle');
 
--- ##########################################################
--- Assembly of Iron
--- ##########################################################
-
--- Loot
 DELETE FROM `reference_loot_template` WHERE `entry`=34122 AND `lootmode`=4;
 DELETE FROM `creature_loot_template` WHERE `entry`=32867 AND `lootmode`=4;
 
@@ -92,58 +80,42 @@ INSERT INTO `creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `l
 UPDATE `creature_loot_template` SET `item`=45857, `lootmode`=1 WHERE `entry` IN (33692,33693) AND `lootmode`=2;
 UPDATE `creature_loot_template` SET `lootmode`=1 WHERE `entry`=33693 AND `lootmode`=4;
 
--- Limit Supercharge targets
 DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId`=13 AND `SourceEntry`=61920;
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`,`SourceEntry`,`ConditionTypeOrReference`,`ConditionValue1`,`ConditionValue2`) VALUES
 (13,61920,18,1,32857),
 (13,61920,18,1,32867),
 (13,61920,18,1,32927);
 
--- Lightning Tendrils Visual
 DELETE FROM `spell_linked_spell` WHERE `spell_trigger` IN (61887,63486);
 INSERT INTO `spell_linked_spell` (`spell_trigger`,`spell_effect`,`type`,`comment`) VALUES
 (61887,61883,2, 'Lightning Tendrils - Visual'),
 (63486,61883,2, 'Lightning Tendrils - Visual');
 
--- trigger Electrical Charge on Meltdown
 DELETE FROM `spell_script_names` WHERE `spell_id`=61889;
 INSERT INTO `spell_script_names` (`spell_id`,`ScriptName`) VALUES
 (61889, 'spell_meltdown');
 
--- ##########################################################
--- Kologarn
--- ##########################################################
 DELETE FROM `npc_spellclick_spells` WHERE `npc_entry` IN (32930);
 INSERT INTO `npc_spellclick_spells` (`npc_entry`,`spell_id`,`quest_start`,`quest_start_active`,`quest_end`,`cast_flags`,`aura_required`,`aura_forbidden`,`user_type`) VALUES
-(32930,46598,0,0,0,1,0,0,0); -- Kologarn - Arm - Ride Vehicle Hardcoded
+(32930,46598,0,0,0,1,0,0,0); 
 
--- Stone Grip Absorb - target condition
 DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId`=13 AND `SourceEntry` IN (64224,64225);
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`,`SourceEntry`,`ConditionTypeOrReference`,`ConditionValue1`,`ConditionValue2`) VALUES
 (13,64224,18,1,32934),
 (13,64225,18,1,32934);
 
--- ##########################################################
--- Auriaya
--- ##########################################################
 UPDATE creature_template SET ScriptName = "boss_auriaya" WHERE Entry = 33515;
 UPDATE creature_template SET ScriptName = "mob_feral_defender" WHERE Entry = 34035;
 UPDATE creature_template SET ScriptName = "mob_sanctum_sentry" WHERE Entry = 34014;
 UPDATE creature_template SET ScriptName = "mob_seeping_essence_stalker" WHERE Entry = 34098;
 
--- Strength of the Pack
 DELETE FROM `spell_script_names` WHERE `spell_id`=64381;
 INSERT INTO `spell_script_names` (`spell_id`,`ScriptName`) VALUES
 (64381, 'spell_strength_of_the_pack');
 
--- ##########################################################
--- Hodir
--- ##########################################################
--- Hodir
 UPDATE `creature_template` SET `mechanic_immune_mask` = 650854239, `flags_extra` = 1, `ScriptName` = 'boss_hodir' WHERE `entry` = 32845;
 UPDATE `creature_template` SET `equipment_id` = 1843, `mechanic_immune_mask` = 650854239, `flags_extra` = 1 WHERE `entry` = 32846;
 
--- Hodir npcs
 UPDATE `creature_template` SET `ScriptName` = 'npc_hodir_priest' WHERE `entry` IN (32897, 33326, 32948, 33330);
 UPDATE `creature_template` SET `ScriptName` = 'npc_hodir_shaman' WHERE `entry` IN (33328, 32901, 33332, 32950);
 UPDATE `creature_template` SET `ScriptName` = 'npc_hodir_druid' WHERE `entry` IN (33325, 32900, 32941, 33333);
@@ -163,12 +135,8 @@ VALUES
 (62038,'spell_biting_cold'),
 (62039,'spell_biting_cold');
 
--- Cleanup
 DELETE FROM `creature` WHERE `id` IN (32950, 32941, 32948, 32946, 32938);
 
--- ##########################################################
--- Freya
--- ##########################################################
 UPDATE creature_template SET ScriptName = "boss_freya" WHERE Entry = 32906;
 UPDATE creature_template SET ScriptName = "mob_detonating_lasher" WHERE Entry = 32918;
 UPDATE creature_template SET ScriptName = "mob_ancient_water_spirit" WHERE Entry = 33202;
@@ -204,10 +172,6 @@ INSERT INTO spell_script_names (spell_id,ScriptName) VALUES
 DELETE FROM spell_script_names WHERE spell_id = 62688;
 INSERT INTO spell_script_names (spell_id,ScriptName) VALUES (62688,"spell_summon_wave_effect_10mob");
 
--- ##########################################################
--- Mimiron
--- ##########################################################
--- Mimiron Tram
 UPDATE `gameobject_template` SET `flags` = 32, `data2` = 3000, `ScriptName` = 'go_call_tram' WHERE `entry` IN (194914, 194912, 194437);
 DELETE FROM gameobject WHERE id = '194437';
 INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
@@ -219,9 +183,7 @@ DELETE FROM gameobject WHERE id = '194438';
 INSERT INTO `gameobject` (`id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES
 (194438, 603, 1,1,2306.99, 2589.35, 424.382, 4.71676, 0, 0, 0.705559, -0.708651, 300, 0, 1);
 
--- Mimiron
 UPDATE `creature_template` SET `mechanic_immune_mask` = 650854235, `ScriptName` = 'boss_mimiron' WHERE `entry` = 33350;
--- Leviathan MKII
 UPDATE `creature_template` SET `vehicleid` = 370, `mechanic_immune_mask` = 650854235, `ScriptName` = 'boss_leviathan_mk' WHERE `entry` = 33432;
 UPDATE `creature_template` SET `minlevel` = 83, `maxlevel` = 83, `mechanic_immune_mask` = 650854235, `flags_extra` = 1 WHERE `entry` = 34106;
 UPDATE `creature_template` SET `mechanic_immune_mask` = 650854235, `ScriptName` = 'boss_leviathan_mk_turret' WHERE `entry` = 34071;
@@ -233,38 +195,28 @@ INSERT INTO `creature_model_info` (`modelid`, `bounding_radius`, `combat_reach`,
 (28831, 0.5, 7, 2, 0);
 DELETE FROM `npc_spellclick_spells` WHERE `npc_entry` IN (33432,33651);
 INSERT INTO `npc_spellclick_spells` (`npc_entry`,`spell_id`,`quest_start`,`quest_start_active`,`quest_end`,`cast_flags`,`aura_required`,`aura_forbidden`,`user_type`) VALUES
-(33432,46598,0,0,0,1,0,0,0), -- Leviatan MKII - Ride Vehicle Hardcoded
-(33651,46598,0,0,0,1,0,0,0); -- VX 001 - Ride Vehicle Hardcoded
+(33432,46598,0,0,0,1,0,0,0), 
+(33651,46598,0,0,0,1,0,0,0); 
 
--- VX-001
 UPDATE `creature_template` SET `mechanic_immune_mask` = 650854235, `flags_extra` = 1, `vehicleid` = 371, `ScriptName` = 'boss_vx_001' WHERE `entry` = 33651;
 UPDATE `creature_template` SET `minlevel` = 83, `maxlevel` = 83, `mechanic_immune_mask` = 650854235, `flags_extra` = 1 WHERE `entry` = 34108;
 UPDATE `creature_template` SET `faction_A` = 35, `faction_H` = 35 WHERE `entry` = 34050;
 UPDATE `creature_template` SET `unit_flags` = 33686020, `flags_extra` = 2 WHERE `entry` = 34211;
 UPDATE `creature_template` SET `ScriptName` = 'npc_rocket_strike' WHERE `entry` = 34047;
-
--- Aerial Command Unit
 UPDATE `creature_template` SET `mechanic_immune_mask` = 650854235, `flags_extra` = 1, `ScriptName` = 'boss_aerial_unit', `vehicleid` = 372 WHERE `entry` = 33670;
 UPDATE `creature_template` SET `minlevel` = 83, `maxlevel` = 83, `mechanic_immune_mask` = 650854235, `flags_extra` = 1 WHERE `entry` = 34109;
 UPDATE `creature_template` SET `ScriptName` = 'npc_magnetic_core' WHERE `entry` = 34068;
 UPDATE `creature_template` SET `ScriptName` = 'npc_assault_bot' WHERE `entry` = 34057;
 UPDATE `creature_template` SET `difficulty_entry_1` = 34148, `ScriptName` = 'npc_emergency_bot' WHERE `entry` = 34147;
-
--- HardMode
 UPDATE `gameobject_template` SET `flags` = 32, `ScriptName` = 'go_not_push_button' WHERE `entry` = 194739;
 UPDATE `creature_template` SET `difficulty_entry_1` = 34361, `ScriptName` = 'npc_frost_bomb' WHERE `entry` = 34149;
 UPDATE `creature_template` SET `speed_walk` = 0.15, `speed_run` = 0.15, `ScriptName` = 'npc_mimiron_flame_trigger' WHERE `entry` = 34363;
 UPDATE `creature_template` SET `ScriptName` = 'npc_mimiron_flame_spread' WHERE `entry` = 34121;
 UPDATE `creature_template` SET `ScriptName` = 'npc_mimiron_bomb_bot' WHERE `entry` = 33836;
 
--- CleanUp
 DELETE FROM creature WHERE id IN (34071, 33856);
 UPDATE `creature_template` SET `flags_extra` = 2 WHERE `entry` = 34143;
 
--- ##########################################################
--- Thorim
--- ##########################################################
--- Thorim
 UPDATE `creature_template` SET `speed_walk` = 1.66667, `mechanic_immune_mask` = 650854239, `flags_extra` = 1, `ScriptName` = 'boss_thorim' WHERE `entry` = 32865;
 UPDATE `creature_template` SET `speed_walk` = 1.66667, `baseattacktime` = 1500, `equipment_id` = 1844, `mechanic_immune_mask` = 650854239 WHERE `entry` = 33147;
 DELETE FROM `creature` WHERE `id`=32865;
@@ -274,13 +226,11 @@ DELETE FROM `spell_linked_spell` WHERE `spell_trigger`=62042;
 INSERT INTO `spell_linked_spell` (`spell_trigger`, `spell_effect`, `type`, `comment`) VALUES
 ('62042','62470','1','Thorim: Deafening Thunder');
 
--- Charge Orb
 DELETE FROM conditions WHERE SourceEntry = 62016;
 INSERT INTO `conditions` VALUES
 ('13','0','62016','0','18','1','33378','0','0','',NULL);
 UPDATE `creature_template` SET `unit_flags` = 33685508 WHERE `entry` = 33378;
 
--- Gate
 DELETE FROM `gameobject_scripts` WHERE `id`=55194;
 INSERT INTO `gameobject_scripts` (`id`, `delay`, `command`, `datalong`, `datalong2`, `dataint`, `x`, `y`, `z`, `o`) VALUES 
 (55194, 0, 11, 34155, 15, '0', 0, 0, 0, 0);
@@ -289,11 +239,9 @@ INSERT INTO `gameobject_template` (`entry`, `type`, `displayId`, `name`, `IconNa
 ('194265','1','295','Lever','','','','35','32','3','0','0','0','0','0','0','0','0','6000','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','','0');
 UPDATE `gameobject` SET `id` = 194265, `rotation2` = 1, `rotation3` = 0, `spawntimesecs` = 7200, `animprogress` = 100 WHERE `guid` = 55194;
 
--- Cleanup
 DELETE FROM `creature` WHERE `id` IN (32885, 32883, 32908, 32907, 32882, 33110, 32886, 32879, 32892, 33140, 33141, 33378, 32874, 32875)
 OR guid IN (136694, 136695, 136666, 136706, 136754, 136653, 136756, 136757, 136725, 136718);
 
--- Pre adds
 UPDATE `creature_template` SET `equipment_id` = 1849, `ScriptName` = 'npc_thorim_pre_phase' WHERE `entry` = 32885;
 UPDATE `creature_template` SET `equipment_id` = 1849 WHERE `entry` = 33153;
 UPDATE `creature_template` SET `ScriptName` = 'npc_thorim_pre_phase' WHERE `entry` = 32883;
@@ -305,8 +253,6 @@ UPDATE `creature_template` SET `equipment_id` = 1852 WHERE `entry` = 33150;
 UPDATE `creature_template` SET `ScriptName` = 'npc_thorim_pre_phase' WHERE `entry` = 32882;
 UPDATE `creature_template` SET `ScriptName` = 'npc_thorim_pre_phase' WHERE `entry` = 32886;
 UPDATE `creature_template` SET `modelid1` = 16925, `modelid2` = 0 WHERE `entry`IN (33378, 32892);
-
--- Thorim Mini bosses
 UPDATE `creature_template` SET `mechanic_immune_mask` = 650854239, `flags_extra` = 1, `ScriptName` = 'npc_runic_colossus' WHERE `entry` = 32872;
 UPDATE `creature_template` SET `mechanic_immune_mask` = 650854239, `flags_extra` = 1, `ScriptName` = 'npc_ancient_rune_giant' WHERE `entry` = 32873;
 UPDATE `creature_template` SET `mechanic_immune_mask` = 650854239, `flags_extra` = 1, `ScriptName` = 'npc_sif' WHERE `entry` = 33196;
@@ -316,9 +262,6 @@ INSERT INTO `creature_addon` (`guid`, `path_id`, `mount`, `bytes1`, `bytes2`, `e
 ('136059','0','0','0','1','0','40775 0'),
 ('136816','0','0','0','1','0','40775 0');
 
--- ##########################################################
--- General Vezax
--- ##########################################################
 UPDATE creature_template SET scriptname = 'boss_general_vezax' WHERE entry = 33271;
 UPDATE creature_template SET scriptname = 'mob_saronit_varpor' WHERE entry = 33488;
 UPDATE creature_template SET scriptname = 'mob_saronit_animus' WHERE entry = 33524;
@@ -326,12 +269,6 @@ DELETE FROM spell_script_names WHERE spell_id = 62692;
 INSERT INTO spell_script_names VALUE (62692,'spell_general_vezax_aura_of_despair_aura');
 DELETE FROM spell_script_names WHERE spell_id = 63276;
 INSERT INTO spell_script_names VALUE (63276,'spell_general_vezax_mark_of_the_faceless_aura');
--- DELETE FROM spell_script_names WHERE spell_id = 63278;
--- INSERT INTO spell_script_names VALUE (63278,'spell_general_vezax_mark_of_the_faceless_spell');
-
--- ##########################################################
--- Yogg-Saron
--- ##########################################################
 
 UPDATE creature_template SET scriptname = 'boss_sara' WHERE entry = 33134;
 UPDATE script_texts SET npc_entry = 33134 WHERE npc_entry = 33288 AND entry IN (-1603330,-1603331,-1603332,-1603333);
@@ -356,13 +293,10 @@ UPDATE creature_template SET modelid1 = 17612, modelid2 = 17612 WHERE entry = 33
 UPDATE creature_template SET minlevel = 80, maxlevel = 80, scriptname = 'npc_laughting_skull' WHERE entry = 33990;
 UPDATE creature_template SET modelid1 = 15880, modelid2 = 15880 WHERE entry = 33990;
 UPDATE creature_template SET scriptname = 'npc_keeper_help' WHERE entry IN(33241,33244,33242,33213);
-
 UPDATE gameobject_template SET scriptname = 'go_flee_to_surface' WHERE entry = 194625;
 UPDATE item_template SET scriptname = 'item_unbound_fragments_of_valanyr' WHERE entry = 45896;
-
 UPDATE creature_template SET RegenHealth = 0 WHERE entry IN (33134,34332,33890,33954);
 
--- Secound Damage Effekt of ShadowNova only on other Guardians or Sara
 DELETE FROM conditions WHERE SourceEntry = 65209;
 INSERT INTO conditions
 (SourceTypeOrReferenceId,SourceGroup,SourceEntry,ElseGroup,
@@ -380,7 +314,6 @@ VALUES
 (603002, 194625, 603, 3, 1, 1941.61, -25.88, 244.98, 0, 0, 0, 0, 0, 60, 100, 1),
 (603003, 194625, 603, 3, 1, 2001.18,  9.409, 245.24, 0, 0, 0, 0, 0, 60, 100, 1);
 
--- Auren shouldnt hit other friendly NPCs
 DELETE FROM spell_script_names WHERE spell_id IN (62670,62671,62702,62650);
 INSERT INTO spell_script_names (spell_id,Scriptname)
 VALUES
@@ -389,27 +322,22 @@ VALUES
 (62702,'spell_keeper_support_aura_targeting'),
 (62650,'spell_keeper_support_aura_targeting');
 
--- Script for Target Faces Caster
 DELETE FROM spell_script_names WHERE spell_id IN (64164,64168);
 INSERT INTO spell_script_names (spell_id,Scriptname)
 VALUES
 (64164,'spell_lunatic_gaze_targeting'),
 (64168,'spell_lunatic_gaze_targeting');
 
--- Trigger Effekt on Near Player with Brain Link 
 DELETE FROM spell_script_names WHERE spell_id IN (63802);
 INSERT INTO spell_script_names (spell_id,Scriptname)
 VALUES
 (63802,'spell_brain_link_periodic_dummy');
 
--- Needed for Titanic Storm
--- Script for Target have Weakened Aura
 DELETE FROM spell_script_names WHERE spell_id IN (64172);
 INSERT INTO spell_script_names (spell_id,Scriptname)
 VALUES
 (64172,'spell_titanic_storm_targeting');
 
--- Condition because NPCs need this else no hit
 DELETE FROM conditions WHERE SourceEntry = 64172;
 INSERT INTO conditions
 (SourceTypeOrReferenceId,SourceGroup,SourceEntry,ElseGroup,
@@ -418,19 +346,16 @@ INSERT INTO conditions
 VALUES
 (13,0,64172,0,18,1,33988,0,0,'','Effekt only for Immortal Guardians');
 
--- Hodir Secound Aura Script
 DELETE FROM spell_script_names WHERE spell_id IN (64174);
 INSERT INTO spell_script_names (spell_id,Scriptname)
 VALUES
 (64174,'spell_hodir_protective_gaze');
 
--- Insane Death trigger on Remove
 DELETE FROM spell_script_names WHERE spell_id IN (63120);
 INSERT INTO spell_script_names (spell_id,Scriptname)
 VALUES
 (63120,'spell_insane_death_effekt');
 
--- Deathray Effekt on Death Orb
 DELETE FROM conditions WHERE SourceEntry IN (63882,63886);
 INSERT INTO conditions
 (SourceTypeOrReferenceId,SourceGroup,SourceEntry,ElseGroup,
@@ -440,7 +365,6 @@ VALUES
 (13,0,63882,0,18,1,33882,0,0,'','Effekt on Death Orb'),
 (13,0,63886,0,18,1,33882,0,0,'','Effekt on Death Orb');
 
--- Correct Summon Position of Tentacle
 DELETE FROM spell_script_names WHERE spell_id IN (64139,64143,64133);
 INSERT INTO spell_script_names (spell_id,Scriptname)
 VALUES
@@ -448,13 +372,11 @@ VALUES
 (64143,'spell_summon_tentacle_position'),
 (64133,'spell_summon_tentacle_position');
 
--- Heal Trigger for Empowering Shadows
 DELETE FROM spell_script_names WHERE spell_id IN (64466);
 INSERT INTO spell_script_names (spell_id,Scriptname)
 VALUES
 (64466,'spell_empowering_shadows');
 
--- Create Val'anyr on Yogg-Saron
 DELETE FROM conditions WHERE SourceEntry IN (64184);
 INSERT INTO conditions
 (SourceTypeOrReferenceId,SourceGroup,SourceEntry,ElseGroup,
@@ -463,7 +385,6 @@ INSERT INTO conditions
 VALUES
 (13,0,64184,0,18,1,33288,0,0,'','Effekt on YoggSaron');
 
--- Missing Says Vision
 DELETE FROM script_texts WHERE entry BETWEEN -1603360 AND -1603342;
 INSERT INTO script_texts (`npc_entry`,`entry`,`content_default`,`sound`,`type`,`language`,`emote`,`comment`)
 VALUES
@@ -489,7 +410,6 @@ VALUES
 (33535,-1603359,'It is a weapon like no other. It must be like no other.',15610,0,0,0,'Malygos DragonSoulVision_Say'),
 (33288,-1603360,'His brood learned their lesson before too long, you shall soon learn yours!',15765,0,0,0,'YoggSaron DragonSoulVision_Say1');
 
--- For Achievement In his House he waits dreaming
 DELETE FROM achievement_criteria_data WHERE `type` = 18 AND criteria_id IN
 (10321,10322,10323,10324,10325,10326);
 
@@ -502,12 +422,6 @@ VALUES
 DELETE FROM disables WHERE sourceType = 4 AND entry IN 
 (10321,10322,10323,10324,10325,10326);
 
-
--- ##########################################################
--- Algalon
--- ##########################################################
-
--- For Achievement He Feeds on your Tears
 DELETE FROM achievement_criteria_data WHERE `type` = 18 AND criteria_id IN
 (10568,10570);
 
@@ -519,18 +433,14 @@ VALUES
 DELETE FROM disables WHERE sourceType = 4 AND entry IN 
 (10568,10570);
 
--- spawn algalon
 DELETE FROM `creature` WHERE `id`=32871;
 INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) VALUES
 ('302616','32871','603','3','1','0','0','1632.36','-310.093','417.321','1.8445','604800','0','0','34862500','0','0','0','0','0');
 
--- set to friendly by default
 UPDATE `creature_template` SET `faction_A`=35, `faction_H`=35, `flags_extra`=1 WHERE `entry` IN (32871,33070);
-
 UPDATE `creature_template` SET `ScriptName`='npc_black_hole' WHERE `entry`=32953;
 UPDATE `creature_template` SET `ScriptName`='npc_living_constellation' WHERE `entry`=33052;
 
--- spawn 'Celestial Planetarium Access'
 DELETE FROM `gameobject` WHERE `id`= 194628;
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `phaseMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`)
 VALUES (400002, 194628, 603, 3, 1, 1649.49, -174.711, 427.257, 1.5708, 0, 0, 0, 0, 180, 0, 1);
@@ -596,10 +506,10 @@ INSERT INTO `gameobject` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`position_x`
 
 DELETE FROM `conditions` WHERE SourceTypeOrReferenceId=13 AND SourceEntry IN (62304,64996,64597,62168);
 INSERT INTO `conditions`(`SourceTypeOrReferenceId`,`SourceGroup`,`SourceEntry`,`ElseGroup`,`ConditionTypeOrReference`,`ConditionValue1`,`ConditionValue2`,`ConditionValue3`,`ErrorTextId`,`ScriptName`,`Comment`) VALUES 
-( '13','0','62304','0','18','1','33104','0','0','','Algalon Cosmic Smash Missle'), -- 10 man
-( '13','0','64597','0','18','1','33104','0','0','','Algalon Cosmic Smash Missle'), -- 25 man
-( '13','0','64996','0','18','1','34246','0','0','','Algalon Reorigination'), -- visual
-( '13','0','62168','0','18','1','0','0','0','','Black Hole Shift'); -- Players Only
+( '13','0','62304','0','18','1','33104','0','0','','Algalon Cosmic Smash Missle'), 
+( '13','0','64597','0','18','1','33104','0','0','','Algalon Cosmic Smash Missle'), 
+( '13','0','64996','0','18','1','34246','0','0','','Algalon Reorigination'), 
+( '13','0','62168','0','18','1','0','0','0','','Black Hole Shift'); 
 
 
 DELETE FROM `spell_script_names` WHERE `spell_id` IN(64412,62293,62295,62311,64596,64443,64584,62168,62301,64598,64487,65312);
@@ -615,7 +525,6 @@ INSERT INTO `spell_script_names`(`spell_id`,`ScriptName`) VALUES
 ( '62301','spell_algalon_cosmic_smash_initial'), 
 ( '64598','spell_algalon_cosmic_smash_initial'),
 ( '64487','spell_algalon_ascend_to_the_heavens');
-
 
 DELETE FROM `spell_linked_spell` WHERE `spell_trigger` IN(62168);
 INSERT INTO `spell_linked_spell`(`spell_trigger`,`spell_effect`,`type`,`comment`) VALUES ( '62168','62169','2','Algalon - Black Hole Damage');

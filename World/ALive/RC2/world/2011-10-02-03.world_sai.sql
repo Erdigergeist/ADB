@@ -1,4 +1,3 @@
--- Saronite Mine Slave SAI
 SET @ENTRY := 31397;
 SET @QUEST := 13300;
 SET @GOSSIP := 10137;
@@ -11,7 +10,6 @@ INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type
 (@ENTRY*100,9,2,0,0,0,100,1,0,0,0,0,33,31866,0,0,0,0,0,0,0,0,0,0,0,0,0,"Saronite Mine Slave - On Script - Quest Credit"),
 (@ENTRY*100,9,3,0,0,0,100,1,0,0,0,0,41,5000,0,0,0,0,0,0,0,0,0,0,0,0,0,"Saronite Mine Slave - On Script - Force Despawn");
 
--- Texts
 DELETE FROM `creature_text` WHERE `entry`=@ENTRY;
 INSERT INTO `creature_text` (`entry`,`groupid`,`id`,`text`,`type`,`language`,`probability`,`emote`,`duration`,`sound`,`comment`) VALUES
 (@ENTRY,0,0,"AHAHAHAHA... you'll join us soon enough!",14,0,100,0,0,0,"Saronite Mine Slave"),
@@ -20,16 +18,13 @@ INSERT INTO `creature_text` (`entry`,`groupid`,`id`,`text`,`type`,`language`,`pr
 (@ENTRY,0,3,"My life for you!",14,0,100,0,0,0,"Saronite Mine Slave"),
 (@ENTRY,0,4,"I'm coming, master!",14,0,100,0,0,0,"Saronite Mine Slave");
 
--- Actual story menu
 DELETE FROM `gossip_menu` WHERE `entry`=@GOSSIP AND `text_id`=14068;
 INSERT INTO `gossip_menu` (`entry`,`text_id`) VALUES (@GOSSIP,14068);
 
--- Insert option menu
 DELETE FROM `gossip_menu_option` WHERE `menu_id`=@GOSSIP;
 INSERT INTO `gossip_menu_option` (`menu_id`,`id`,`option_icon`,`option_text`,`option_id`,`npc_option_npcflag`,`action_menu_id`) VALUES
 (@GOSSIP,0,0,"Go on, you're free. Get out of here!",1,1,0);
 
--- Only show gossip if player is on quest Slaves to Saronite
 DELETE FROM `conditions` WHERE `SourceGroup`=@GOSSIP AND `ConditionValue1`=@QUEST;
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`,`SourceGroup`,`SourceEntry`,`ElseGroup`,`ConditionTypeOrReference`,`ConditionValue1`,`ConditionValue2`,`ConditionValue3`,`ErrorTextId`,`ScriptName`,`Comment`) VALUES
 (15,@GOSSIP,0,0,9,@QUEST,0,0,0,'',"Only show first gossip if player is on quest Slaves to Saronite");

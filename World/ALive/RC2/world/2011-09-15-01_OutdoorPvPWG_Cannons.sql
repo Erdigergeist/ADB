@@ -1,19 +1,10 @@
--- Immunity Mask
 UPDATE `creature_template` SET `mechanic_immune_mask` = '804257791' WHERE `entry` = '28366';	-- Set all immunities
-
--- Set 0 movementspeed
 UPDATE `creature_template` SET `speed_walk` = '0', `speed_run` = '0' WHERE `entry` = '28366';
-
--- Set some flags
 UPDATE `creature_template` SET `flags_extra` = '2' WHERE `entry` = '28366'; 		-- creature does not aggro (ignore faction/reputation hostility) 
 UPDATE `creature_template` SET `type_flags` = '131112' WHERE `entry` = '28366'; 	-- UNK4, UNK6, UNK18
 UPDATE `creature_template` SET `unit_flags` = '32772' WHERE `entry` = '28366';		-- Disable Move, UNK15
 UPDATE `creature_template` SET `InhabitType` = '5' WHERE `entry` = '28366';			-- Avoid npc can fall under GameObject
-
--- Add Spell
 UPDATE `creature_template` SET `spell1` = '51421' WHERE `entry` = '28366';			-- Fire Cannon
-
--- Spawn Cannons
 DELETE FROM `creature` WHERE `id` = '28366';
 insert into `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) values('28366','571','1','1','0','0','5148','2862.03','421.631','3.16591','300','0','0','50000','0','0','0','0','0');
 insert into `creature` (`id`, `map`, `spawnMask`, `phaseMask`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`) values('28366','571','1','1','0','0','5132.03','2748.01','413.492','2.97742','300','0','0','50000','0','0','0','0','0');

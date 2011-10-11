@@ -1,4 +1,4 @@
-DELETE FROM `player_factionchange_items` WHERE `alliance_id`=48356; -- Wrong entry
+DELETE FROM `player_factionchange_items` WHERE `alliance_id`=48356;
  
 DELETE FROM `player_factionchange_spells` WHERE `alliance_id` IN (67093,67091,67095,67096,67092,67085,67080,67082,67087,67083,67084,67086,60867,67065,67064,67079,67066);
 INSERT INTO `player_factionchange_spells` (`alliance_id`,`horde_id`) VALUES
