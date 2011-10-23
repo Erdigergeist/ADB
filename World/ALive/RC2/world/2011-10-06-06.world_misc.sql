@@ -1,4 +1,4 @@
--- Pathing for Conquest Hold Berserker Entry: 27500
+
 SET @NPC := 105857;
 SET @PATH := @NPC * 10;
 UPDATE `creature` SET `spawndist`=0,`MovementType`=2,`position_x`=2721.081,`position_y`=-1832.136,`position_z`=4.838899 WHERE `guid`=@NPC;
@@ -16,7 +16,7 @@ INSERT INTO `waypoint_data` (`id`,`point`,`position_x`,`position_y`,`position_z`
 (@PATH,8,2737.419,-1830.768,4.838899,0,0,0,100,0),
 (@PATH,9,2732.511,-1831.47,4.838899,0,0,0,100,0),
 (@PATH,10,2721.081,-1832.136,4.838899,0,0,0,100,0);
--- Pathing for Conquest Hold Berserker Entry: 27500
+
 SET @NPC := 105821;
 SET @PATH := @NPC * 10;
 UPDATE `creature` SET `spawndist`=0,`MovementType`=2,`position_x`=2738.191,`position_y`=-1784.905,`position_z`=5.87062 WHERE `guid`=@NPC;
@@ -34,7 +34,7 @@ INSERT INTO `waypoint_data` (`id`,`point`,`position_x`,`position_y`,`position_z`
 (@PATH,8,2746.422,-1807.012,5.22166,0,0,0,100,0),
 (@PATH,9,2741.883,-1793.762,5.804742,0,0,0,100,0),
 (@PATH,10,2738.191,-1784.905,5.87062,0,0,0,100,0);
--- Pathing for Conquest Hold Berserker Entry: 27500
+
 SET @NPC := 105859;
 SET @PATH := @NPC * 10;
 UPDATE `creature` SET `spawndist`=0,`MovementType`=2,`position_x`=2753.638,`position_y`=-1895.846,`position_z`=5.03679 WHERE `guid`=@NPC;
@@ -54,7 +54,7 @@ INSERT INTO `waypoint_data` (`id`,`point`,`position_x`,`position_y`,`position_z`
 (@PATH,10,2754.56,-1879.827,5.126619,0,0,0,100,0),
 (@PATH,11,2754.177,-1888.177,5.087607,0,0,0,100,0),
 (@PATH,12,2753.638,-1895.846,5.03679,0,0,0,100,0);
--- Pathing for Conquest Hold Berserker Entry: 27500
+
 SET @NPC := 105810;
 SET @PATH := @NPC * 10;
 UPDATE `creature` SET `spawndist`=0,`MovementType`=2,`position_x`=2805.754,`position_y`=-1824.487,`position_z`=10.76279 WHERE `guid`=@NPC;
@@ -70,7 +70,7 @@ INSERT INTO `waypoint_data` (`id`,`point`,`position_x`,`position_y`,`position_z`
 (@PATH,6,2806.509,-1806.167,10.63779,0,0,0,100,0),
 (@PATH,7,2806.472,-1815.43,10.76279,0,0,0,100,0),
 (@PATH,8,2805.754,-1824.487,10.76279,0,0,0,100,0);
--- Pathing for Conquest Hold Berserker Entry: 27500
+
 SET @NPC := 105750;
 SET @PATH := @NPC * 10;
 UPDATE `creature` SET `spawndist`=0,`MovementType`=2,`position_x`=2691.886,`position_y`=-1764.669,`position_z`=9.601107 WHERE `guid`=@NPC;
@@ -84,7 +84,7 @@ INSERT INTO `waypoint_data` (`id`,`point`,`position_x`,`position_y`,`position_z`
 (@PATH,4,2714.329,-1758.981,9.601107,0,0,0,100,0),
 (@PATH,5,2705.537,-1760.065,9.601107,0,0,0,100,0),
 (@PATH,6,2691.886,-1764.669,9.601107,0,0,0,100,0);
--- Pathing for Conquest Hold Berserker Entry: 27500
+
 SET @NPC := 105854;
 SET @PATH := @NPC * 10;
 UPDATE `creature` SET `spawndist`=0,`MovementType`=2,`position_x`=2683.998,`position_y`=-1873.36,`position_z`=14.20639 WHERE `guid`=@NPC;
@@ -100,7 +100,6 @@ INSERT INTO `waypoint_data` (`id`,`point`,`position_x`,`position_y`,`position_z`
 (@PATH,6,2690.931,-1875.133,13.94601,0,0,0,100,0),
 (@PATH,7,2683.998,-1873.36,14.20639,0,0,0,100,0);
 
--- Pathing for Westfall Brigade Marine Entry: 27501
 SET @NPC := 105933;
 SET @PATH := @NPC * 10;
 UPDATE `creature` SET `spawndist`=0,`MovementType`=2,`position_x`=2670.551,`position_y`=-2010.984,`position_z`=18.17214 WHERE `guid`=@NPC;
@@ -112,7 +111,7 @@ INSERT INTO `waypoint_data` (`id`,`point`,`position_x`,`position_y`,`position_z`
 (@PATH,2,2670.639,-2010.848,18.17313,0,0,0,100,0),
 (@PATH,3,2667.047,-2016.413,18.20223,0,0,0,100,0),
 (@PATH,4,2670.551,-2010.984,18.17214,0,0,0,100,0);
--- Pathing for Westfall Brigade Marine Entry: 27501
+
 SET @NPC := 105932;
 SET @PATH := @NPC * 10;
 UPDATE `creature` SET `spawndist`=0,`MovementType`=2,`position_x`=2633.481,`position_y`=-1987.501,`position_z`=8.764043 WHERE `guid`=@NPC;
@@ -130,40 +129,33 @@ INSERT INTO `waypoint_data` (`id`,`point`,`position_x`,`position_y`,`position_z`
 (@PATH,8,2638.931,-1981.989,8.592985,0,0,0,100,0),
 (@PATH,9,2633.481,-1987.501,8.764043,0,0,0,100,0);
 
--- Missing spawn for Purkom "Venture Coin Vendor" Horde
 DELETE FROM `creature` WHERE `id`=27730;
 DELETE FROM `creature` WHERE `guid`=107018 AND `id`=27511;
 INSERT INTO creature (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`MovementType`) VALUES
 (107018,27730,571,1,1,0,0,2492.467,-1839.655,11.72851,5.532694,120,0,0,1,0,0);
 
--- Rogue Voidwalkers Shouldn't have weapons
 UPDATE `creature_template` SET `equipment_id`=0 WHERE `entry`=16974;
 
--- Add Missing Spawn
 DELETE FROM `creature` WHERE `guid` IN (13425,13426,13427,13428,14241);
 INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`MovementType`) VALUES
--- Bubb Lazarr
 (13425,27628,571,1,1,0,0,2404.771,-1823.437,1.99793,5.078908,300,0,0,1,0,0),
--- Rocket Propelled Warhead
 (13426,27593,571,1,1,0,0,2394.92358,-1832.18921,-1.69907868,2.687807,300,0,0,1,0,0),
 (13427,27593,571,1,1,0,0,2396.13013,-1829.49475,-1.6780616,2.75762,300,0,0,1,0,0),
 (13428,27593,571,1,1,0,0,2397.40283,-1826.75,-1.65229559,2.72271371,300,0,0,1,0,0),
 (14241,27593,571,1,1,0,0,2398.62329,-1824.14063,-1.66098964,2.740167,300,0,0,1,0,0);
 
--- Template updates Rocket Propelled Warhead
 UPDATE `creature_template` SET `npcflag`=`npcflag`|16777216,`InhabitType`=4,`unit_flags`=`unit_flags`|16384,`speed_walk`=12,`speed_run`=4.28571 WHERE `entry`=27593;
 
-UPDATE `creature_model_info` SET `bounding_radius`=0.534723,`combat_reach`=3.5,`gender`=2 WHERE `modelid`=26611; -- Rocket Propelled Warhead
+UPDATE `creature_model_info` SET `bounding_radius`=0.534723,`combat_reach`=3.5,`gender`=2 WHERE `modelid`=26611; 
 
 DELETE FROM `creature_template_addon` WHERE `entry`=27593;
 INSERT INTO `creature_template_addon` (`entry`,`mount`,`bytes1`,`bytes2`,`emote`,`auras`) VALUES
-(27593,0,0,1,0, NULL); -- Rocket Propelled Warhead
+(27593,0,0,1,0, NULL); 
 
 DELETE FROM `npc_spellclick_spells` WHERE `npc_entry`=27593;
 INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `quest_start`, `quest_start_active`, `quest_end`, `cast_flags`, `aura_required`, `aura_forbidden`, `user_type`) VALUES
-(27593, 49177, 0, 0, 0, 1, 0, 0, 0); -- Ride Rocket Propelled Warhead
+(27593, 49177, 0, 0, 0, 1, 0, 0, 0); 
 
--- Fix requirements for Element 115 from Nayd
 DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId`=4 AND `SourceEntry`=37664;
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES
 (4, 24095, 37664, 0, 9, 12433, 0, 0, 0, '', 'Element 115 - Seeking Solvent'),
@@ -174,7 +166,6 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry
 (4, 24095, 37664, 5, 9, 12432, 0, 0, 0, '', 'Element 115 - Riding the Red Rocket H');
 UPDATE `gameobject_loot_template` SET `ChanceOrQuestChance`=100 WHERE `entry`=24095 AND `item`=37664;
 
--- Add some missing Azure Scalebane Spawns to crystalsong Forest
 DELETE FROM `creature` WHERE `guid` IN (6499,6627,7630,10504,12599,12954,13423,13424);
 INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`,`currentwaypoint`,`curhealth`,`curmana`,`MovementType`,`unit_flags`,`dynamicflags`) VALUES
 (6499,31402,571,1,1,0,0,5220.886,591.7798,187.861328,4.866286,180,10,0,1,0,1,0,0),
@@ -185,12 +176,12 @@ INSERT INTO `creature` (`guid`,`id`,`map`,`spawnMask`,`phaseMask`,`modelid`,`equ
 (12954,31402,571,1,1,0,0,5573.34326,862.8543,161.738586,1.48352981,180,10,0,1,0,1,0,0),
 (13423,31402,571,1,1,0,0,5659.52734,987.839844,174.5677,0.314159274,180,0,0,1,0,0,570688256,32),
 (13424,31402,571,1,1,0,0,5660.18652,1028.454,174.562653,2.79252672,180,0,0,1,0,0,570688256,32);
--- Addons for dead appearance
+
 DELETE FROM `creature_addon` WHERE `guid` IN (13423,13424);
 INSERT INTO `creature_addon` (`guid`,`bytes2`,`auras`) VALUES
 (13423,1,29266),
 (13424,1,29266);
-UPDATE `creature_model_info` SET `bounding_radius`=0.465,`combat_reach`=1.5,`gender`=0 WHERE `modelid`=25195; -- Azure Scalebane
+UPDATE `creature_model_info` SET `bounding_radius`=0.465,`combat_reach`=1.5,`gender`=0 WHERE `modelid`=25195; 
 DELETE FROM `creature_template_addon` WHERE `entry`=31402;
 INSERT INTO `creature_template_addon` (`entry`,`mount`,`bytes1`,`bytes2`,`emote`,`auras`) VALUES
-(31402,0,0,1,0, NULL); -- Azure Scalebane
+(31402,0,0,1,0, NULL); 

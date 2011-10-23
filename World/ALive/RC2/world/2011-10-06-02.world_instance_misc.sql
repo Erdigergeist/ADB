@@ -35,7 +35,6 @@ INSERT INTO `creature_text` (`entry`,`groupid`,`id`,`text`,`type`,`language`,`pr
 (39217,0,0,'You have come to bring Arthas to justice? To see the Lich King destroyed?',14,0,0,0,0,17394,'Terenas Menethil - SAY_TERENAS_INTRO_1'),
 (39217,1,0,'First, you must escape Frostmourne''s hold, or be damned as I am; trapped within this cursed blade for all eternity.',14,0,0,0,0,17395,'Terenas Menethil - SAY_TERENAS_INTRO_2');
 
--- Text corrections
 DELETE FROM `creature_text` WHERE `entry`=36627 AND `groupid` IN (4,9);
 DELETE FROM `creature_text` WHERE `entry`=36678 AND `groupid`=9;
 INSERT INTO `creature_text` (`entry`,`groupid`,`id`,`text`,`type`,`language`,`probability`,`emote`,`duration`,`sound`,`comment`) VALUES
@@ -43,62 +42,61 @@ INSERT INTO `creature_text` (`entry`,`groupid`,`id`,`text`,`type`,`language`,`pr
 (36627,9,0,'|TInterface\\Icons\\ability_creature_disease_02.blp:16|tYou have |cFF00FF00Mutated Infection!|r',42,0,0,0,0,0,'Rotface - EMOTE_MUTATED_INFECTION'),
 (36678,9,0,'|TInterface\\Icons\\inv_misc_herb_evergreenmoss.blp:16|t%s cast |cFF00FF00Malleable Goo!|r',41,0,0,0,0,0,'Professor Putricide - EMOTE_MALLEABLE_GOO');
 
-UPDATE `creature_template` SET `speed_walk`=2,`speed_run`=1.71429,`exp`=2,`minlevel`=83,`maxlevel`=83,`faction_A`=974,`faction_H`=974,`unit_flags`=768,`dynamicflags`=0,`equipment_id`=2425,`baseattacktime`=1500 WHERE `entry` IN (36597,39166,39167,39168); -- The Lich King
-UPDATE `creature_template` SET `exp`=2,`unit_class`=2 WHERE `entry`=38995; -- Highlord Tirion Fordring
-UPDATE `creature_template` SET `speed_walk`=1.2,`speed_run`=0.428571,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`dynamicflags`=0 WHERE `entry` IN (36633,39305,39306,39307); -- Ice Sphere
-UPDATE `creature_template` SET `speed_walk`=2,`speed_run`=1.42857,`exp`=2,`minlevel`=83,`maxlevel`=83,`faction_A`=14,`faction_H`=14,`dynamicflags`=0 WHERE `entry`=36701; -- Raging Spirit
-UPDATE `creature_template` SET `speed_walk`=1.2,`speed_run`=0.428571,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`dynamicflags`=0,`unit_flags`=33554944 WHERE `entry`=38757; -- Defile
-UPDATE `creature_template` SET `minlevel`=80,`maxlevel`=80,`exp`=2,`faction_A`=14,`faction_H`=14,`speed_walk`=2,`speed_run`=1.71429,`unit_flags`=33554944,`dynamicflags`=0,`VehicleId`=532,`InhabitType`=1|4 WHERE `entry` IN (36609,39120,39121,39122); -- Val'kyr Shadowguard
-UPDATE `creature_template` SET `speed_walk`=2,`speed_run`=1.71429,`exp`=2,`minlevel`=83,`maxlevel`=83,`faction_A`=35,`faction_H`=35,`unit_flags`=33554944,`dynamicflags`=0,`VehicleId`=531,`InhabitType`=1|4,`flags_extra`=0 WHERE `entry`=36598; -- Strangulate Vehicle
-UPDATE `creature_template` SET `speed_walk`=1.2,`speed_run`=0.428571,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`unit_flags`=33554944,`dynamicflags`=0,`flags_extra`=128 WHERE `entry`=38584; -- Frostmourne Trigger
-UPDATE `creature_template` SET `speed_walk`=2.8,`speed_run`=1,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`unit_flags`=32832,`dynamicflags`=0,`flags_extra`=256,`InhabitType`=1|4 WHERE `entry` IN (37799,39284,39285,39286); -- Vile Spirit
-UPDATE `creature_template` SET `speed_walk`=1,`speed_run`=1,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=1665,`faction_H`=1665,`unit_flags`=32832,`dynamicflags`=0,`flags_extra`=0,`equipment_id`=2475 WHERE `entry` IN (36823,38579,39217); -- Terenas Menethil
-UPDATE `creature_template` SET `flags_extra`=`flags_extra`|128 WHERE `entry`=24648; -- Invisible Stalker (Scale x2)
-UPDATE `creature_template` SET `difficulty_entry_1`=39287,`difficulty_entry_2`=39288,`difficulty_entry_3`=39289 WHERE `entry`=39190; -- Wicked Spirit
-UPDATE `creature_template` SET `speed_walk`=2.8,`speed_run`=1,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`unit_flags`=32832,`dynamicflags`=0,`flags_extra`=256,`InhabitType`=1|4 WHERE `entry` IN (39190,39287,39288,39289); -- Wicked Spirit
-UPDATE `creature_template` SET `exp`=2,`minlevel`=83,`maxlevel`=83,`faction_A`=14,`faction_H`=14,`dynamicflags`=0,`flags_extra`=256 WHERE `entry`=36824; -- Spirit Warden
-UPDATE `creature_template` SET `exp`=2,`minlevel`=83,`maxlevel`=83,`faction_A`=14,`faction_H`=14,`dynamicflags`=0,`flags_extra`=128 WHERE `entry`=39137; -- Shadow Trap
-UPDATE `creature_template` SET `exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`InhabitType`=1|4,`flags_extra`=`flags_extra`|128 WHERE `entry`=39189; -- Spirit Bomb
+UPDATE `creature_template` SET `speed_walk`=2,`speed_run`=1.71429,`exp`=2,`minlevel`=83,`maxlevel`=83,`faction_A`=974,`faction_H`=974,`unit_flags`=768,`dynamicflags`=0,`equipment_id`=2425,`baseattacktime`=1500 WHERE `entry` IN (36597,39166,39167,39168); 
+UPDATE `creature_template` SET `exp`=2,`unit_class`=2 WHERE `entry`=38995; 
+UPDATE `creature_template` SET `speed_walk`=1.2,`speed_run`=0.428571,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`dynamicflags`=0 WHERE `entry` IN (36633,39305,39306,39307); 
+UPDATE `creature_template` SET `speed_walk`=2,`speed_run`=1.42857,`exp`=2,`minlevel`=83,`maxlevel`=83,`faction_A`=14,`faction_H`=14,`dynamicflags`=0 WHERE `entry`=36701; 
+UPDATE `creature_template` SET `speed_walk`=1.2,`speed_run`=0.428571,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`dynamicflags`=0,`unit_flags`=33554944 WHERE `entry`=38757; 
+UPDATE `creature_template` SET `minlevel`=80,`maxlevel`=80,`exp`=2,`faction_A`=14,`faction_H`=14,`speed_walk`=2,`speed_run`=1.71429,`unit_flags`=33554944,`dynamicflags`=0,`VehicleId`=532,`InhabitType`=1|4 WHERE `entry` IN (36609,39120,39121,39122); 
+UPDATE `creature_template` SET `speed_walk`=2,`speed_run`=1.71429,`exp`=2,`minlevel`=83,`maxlevel`=83,`faction_A`=35,`faction_H`=35,`unit_flags`=33554944,`dynamicflags`=0,`VehicleId`=531,`InhabitType`=1|4,`flags_extra`=0 WHERE `entry`=36598; 
+UPDATE `creature_template` SET `speed_walk`=1.2,`speed_run`=0.428571,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`unit_flags`=33554944,`dynamicflags`=0,`flags_extra`=128 WHERE `entry`=38584; 
+UPDATE `creature_template` SET `speed_walk`=2.8,`speed_run`=1,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`unit_flags`=32832,`dynamicflags`=0,`flags_extra`=256,`InhabitType`=1|4 WHERE `entry` IN (37799,39284,39285,39286); 
+UPDATE `creature_template` SET `speed_walk`=1,`speed_run`=1,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=1665,`faction_H`=1665,`unit_flags`=32832,`dynamicflags`=0,`flags_extra`=0,`equipment_id`=2475 WHERE `entry` IN (36823,38579,39217); 
+UPDATE `creature_template` SET `flags_extra`=`flags_extra`|128 WHERE `entry`=24648; 
+UPDATE `creature_template` SET `difficulty_entry_1`=39287,`difficulty_entry_2`=39288,`difficulty_entry_3`=39289 WHERE `entry`=39190; 
+UPDATE `creature_template` SET `speed_walk`=2.8,`speed_run`=1,`exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`unit_flags`=32832,`dynamicflags`=0,`flags_extra`=256,`InhabitType`=1|4 WHERE `entry` IN (39190,39287,39288,39289); 
+UPDATE `creature_template` SET `exp`=2,`minlevel`=83,`maxlevel`=83,`faction_A`=14,`faction_H`=14,`dynamicflags`=0,`flags_extra`=256 WHERE `entry`=36824; 
+UPDATE `creature_template` SET `exp`=2,`minlevel`=83,`maxlevel`=83,`faction_A`=14,`faction_H`=14,`dynamicflags`=0,`flags_extra`=128 WHERE `entry`=39137; 
+UPDATE `creature_template` SET `exp`=2,`minlevel`=80,`maxlevel`=80,`faction_A`=14,`faction_H`=14,`InhabitType`=1|4,`flags_extra`=`flags_extra`|128 WHERE `entry`=39189; 
 
--- HACK, Unit::_IsValidAttackTarget returns false because of UNIT_FLAG_OOC_NOT_ATTACKABLE flag
 UPDATE `creature_template` SET `unit_flags`=0x02000000 WHERE `entry`=36171;
 
-UPDATE `creature_model_info` SET `combat_reach`=5.5 WHERE `modelid`=30721; -- The Lich King
-UPDATE `creature_model_info` SET `gender`=0 WHERE `modelid`=31286; -- Highlord Tirion Fordring
+UPDATE `creature_model_info` SET `combat_reach`=5.5 WHERE `modelid`=30721; 
+UPDATE `creature_model_info` SET `gender`=0 WHERE `modelid`=31286; 
 
 DELETE FROM `creature` WHERE `guid`=202865;
 DELETE FROM `creature_addon` WHERE `guid`=150211;
 INSERT INTO `creature_addon` (`guid`,`bytes1`,`auras`) VALUES
-(150211,1,'72846 73220 73878'); -- The Lich King
+(150211,1,'72846 73220 73878'); 
 
 DELETE FROM `creature_template_addon` WHERE `entry` IN (39137,36609,39120,39121,39122,36598,37799,39284,39285,39286,39190,39287,39288,39289,36823,38579,39217,39189);
 INSERT INTO `creature_template_addon` (`entry`,`bytes1`,`auras`) VALUES
 (39137,0,'73530'),
-(36609,50331648,''), -- Val'kyr Shadowguard
-(39120,50331648,''), -- Val'kyr Shadowguard
-(39121,50331648,''), -- Val'kyr Shadowguard
-(39122,50331648,''), -- Val'kyr Shadowguard
-(36598,50331648,''), -- Strangulate Vehicle
-(37799,50331648,''), -- Vile Spirit
-(39284,50331648,''), -- Vile Spirit
-(39285,50331648,''), -- Vile Spirit
-(39286,50331648,''), -- Vile Spirit
-(39190,50331648,''), -- Wicked Spirit
-(39287,50331648,''), -- Wicked Spirit
-(39288,50331648,''), -- Wicked Spirit
-(39289,50331648,''), -- Wicked Spirit
-(36823,0,'72372'), -- Terenas Menethil
-(38579,0,'72372'), -- Terenas Menethil
-(39217,0,'72372'), -- Terenas Menethil
-(39189,0,'73572'); -- Spirit Bomb
+(36609,50331648,''), 
+(39120,50331648,''), 
+(39121,50331648,''), 
+(39122,50331648,''),                       
+(36598,50331648,''), 
+(37799,50331648,''), 
+(39284,50331648,''), 
+(39285,50331648,''), 
+(39286,50331648,''), 
+(39190,50331648,''), 
+(39287,50331648,''), 
+(39288,50331648,''), 
+(39289,50331648,''), 
+(36823,0,'72372'), 
+(38579,0,'72372'), 
+(39217,0,'72372'), 
+(39189,0,'73572'); 
 
 UPDATE `gameobject` SET `rotation3`=1,`animprogress`=255,`spawntimesecs`=604800 WHERE `guid` IN (100056,100061,100064);
 UPDATE `gameobject` SET `rotation2`=1,`animprogress`=255,`spawntimesecs`=604800 WHERE `guid` IN (100057,100058,100059,100060,100062);
 UPDATE `gameobject` SET `rotation3`=1,`animprogress`=255,`spawntimesecs`=-604800 WHERE `guid`=100063;
 
-UPDATE `gameobject_template` SET `faction`=1375,`flags`=32 WHERE `entry`=202438; -- Lavaman Pillars (Unchained)
-UPDATE `gameobject_template` SET `faction`=1375,`flags`=32 WHERE `entry`=202188; -- Doodad_Icecrown_ThroneFrostyWind01
-UPDATE `gameobject_template` SET `faction`=1375,`flags`=32 WHERE `entry`=202189; -- Doodad_Icecrown_ThroneFrostyEdge01
+UPDATE `gameobject_template` SET `faction`=1375,`flags`=32 WHERE `entry`=202438; 
+UPDATE `gameobject_template` SET `faction`=1375,`flags`=32 WHERE `entry`=202188; 
+UPDATE `gameobject_template` SET `faction`=1375,`flags`=32 WHERE `entry`=202189; 
 
 DELETE FROM `gameobject` WHERE `id`=202438;
 INSERT INTO `gameobject` (`guid`,`id`,`map`,`spawnMask`,`position_x`,`position_y`,`position_z`,`rotation3`,`spawntimesecs`,`animprogress`,`state`) VALUES
@@ -159,43 +157,43 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`,`SourceGroup`,`SourceEntry`,
 
 DELETE FROM `spell_target_position` WHERE `id` IN (70860,72546,73655);
 INSERT INTO `spell_target_position` (`id`,`target_map`,`target_position_x`,`target_position_y`,`target_position_z`,`target_orientation`) VALUES
-(70860,631,529.302,-2124.49, 840.857,3.1765), -- Frozen Throne Teleport
-(72546,631,514.000,-2523.00,1050.990,3.1765), -- Harvest Soul (normal mode)
-(73655,631,495.708,-2523.76,1050.990,3.1765); -- Harvest Soul (heroic mode)
+(70860,631,529.302,-2124.49, 840.857,3.1765), 
+(72546,631,514.000,-2523.00,1050.990,3.1765), 
+(73655,631,495.708,-2523.76,1050.990,3.1765); 
 
 DELETE FROM `spell_area` WHERE `spell`=74276;
 INSERT INTO `spell_area` (`spell`,`area`,`autocast`) VALUES
-(74276,4910,1); -- In Frostmourne Room
+(74276,4910,1); 
 
 DELETE FROM `disables` WHERE `entry` IN (12825,13246,13247,13244,13245,13342,13309,13362,13311,12823,13163,13164,13243,12764,12909,12826,13103,13136,13137,13138,12818) AND `sourceType`=4;
 DELETE FROM `achievement_criteria_data` WHERE `criteria_id` IN (12825,13246,13247,13244,13245,13342,13309,13362,13311,12823,13163,13164,13243,12764,12909,12826,13103,13136,13137,13138,12818);
 INSERT INTO `achievement_criteria_data` (`criteria_id`,`type`,`value1`,`value2`,`ScriptName`) VALUES
-(12825,12,2,0,''), -- Bane of the Fallen King
-(13246,11,0,0,'achievement_been_waiting_long_time'), -- Been Waiting a Long Time for This (10 player)
-(13246,12,0,0,''), -- Been Waiting a Long Time for This (10 player)
-(13247,11,0,0,'achievement_been_waiting_long_time'), -- Been Waiting a Long Time for This (10 player) Heroic
-(13247,12,2,0,''), -- Been Waiting a Long Time for This (10 player) Heroic
-(13244,11,0,0,'achievement_been_waiting_long_time'), -- Been Waiting a Long Time for This (25 player)
-(13244,12,1,0,''), -- Been Waiting a Long Time for This (25 player)
-(13245,11,0,0,'achievement_been_waiting_long_time'), -- Been Waiting a Long Time for This (25 player) Heroic
-(13245,12,3,0,''), -- Been Waiting a Long Time for This (25 player) Heroic
-(13342,12,0,0,''), -- Lich King 10-player bosses killed
-(13309,12,0,0,''), -- Lich King 10-player raids completed (final boss killed)
-(13362,12,1,0,''), -- Lich King 25-player bosses killed
-(13311,12,1,0,''), -- Lich King 25-player raids completed (final boss killed)
-(12823,11,0,0,'achievement_neck_deep_in_vile'), -- Neck-Deep in Vile (10 player)
-(12823,12,0,0,''), -- Neck-Deep in Vile (10 player)
-(13163,11,0,0,'achievement_neck_deep_in_vile'), -- Neck-Deep in Vile (10 player) Heroic
-(13163,12,2,0,''), -- Neck-Deep in Vile (10 player) Heroic
-(13164,11,0,0,'achievement_neck_deep_in_vile'), -- Neck-Deep in Vile (25 player)
-(13164,12,1,0,''), -- Neck-Deep in Vile (25 player)
-(13243,11,0,0,'achievement_neck_deep_in_vile'), -- Neck-Deep in Vile (25 player) Heroic
-(13243,12,3,0,''), -- Neck-Deep in Vile (25 player) Heroic
-(12764,12,0,0,''), -- The Frozen Throne (10 player)
-(12909,12,1,0,''), -- The Frozen Throne (25 player)
-(12826,12,3,0,''), -- The Light of Dawn
-(13103,12,0,0,''), -- Victories over the Lich King (Icecrown 10 player)
-(13136,12,1,0,''), -- Victories over the Lich King (Icecrown 25 player)
-(13137,12,2,0,''), -- Victories over the Lich King (Heroic Icecrown 10 player)
-(13138,12,3,0,''), -- Victories over the Lich King (Heroic Icecrown 25 player)
-(12818,12,3,0,''); -- Realm First! Fall of the Lich King
+(12825,12,2,0,''), 
+(13246,11,0,0,'achievement_been_waiting_long_time'), 
+(13246,12,0,0,''), 
+(13247,11,0,0,'achievement_been_waiting_long_time'), 
+(13247,12,2,0,''), 
+(13244,11,0,0,'achievement_been_waiting_long_time'), 
+(13244,12,1,0,''), 
+(13245,11,0,0,'achievement_been_waiting_long_time'), 
+(13245,12,3,0,''), 
+(13342,12,0,0,''), 
+(13309,12,0,0,''), 
+(13362,12,1,0,''), 
+(13311,12,1,0,''), 
+(12823,11,0,0,'achievement_neck_deep_in_vile'), 
+(12823,12,0,0,''), 
+(13163,11,0,0,'achievement_neck_deep_in_vile'), 
+(13163,12,2,0,''), 
+(13164,11,0,0,'achievement_neck_deep_in_vile'), 
+(13164,12,1,0,''), 
+(13243,11,0,0,'achievement_neck_deep_in_vile'), 
+(13243,12,3,0,''), 
+(12764,12,0,0,''), 
+(12909,12,1,0,''), 
+(12826,12,3,0,''), 
+(13103,12,0,0,''), 
+(13136,12,1,0,''), 
+(13137,12,2,0,''), 
+(13138,12,3,0,''), 
+(12818,12,3,0,''); 
