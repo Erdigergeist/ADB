@@ -11,4 +11,4 @@ UPDATE creature_template SET mechanic_immune_mask=110870399 WHERE entry in (
 "37972","38399","38769","38770",
 "37973","38400","38771","38772");
 
-UPDATE creature_template SET mechanic_immune_mask=1818495 WHERE entry in (36855,38106,38296,38297);
+UPDATE creature_template SET mechanic_immune_mask=651935615 WHERE entry in (36855,38106,38296,38297);
