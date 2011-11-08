@@ -1,0 +1,49 @@
+#############################################################################
+#####									#####
+#####         GGGGGGGG	  TTTTTTTTTT     DDDDDDD    BBBBBBB 		#####
+#####        GG      	      TT         D     DD   B      B   		#####
+#####       GG    GGG	      TT         D      D   BBBBBBB    		#####
+#####        GG     GG	      TT         D     DD   B      B   		#####
+#####         GGGGGGG	      TT         DDDDDDD    BBBBBBB    		#####
+#####  			      	 CREW					#####
+#############################################################################
+
+Milestone 0.8:
+
+Wir bieten euch mit jedem Milestone zwei Möglichkeiten eure Datenbank zu patchen!
+
+1. Ersetzen der englischen DB-Einträge: (GTDB_ver_0.8 _template.sql)
+---------------------------------------
+	Jeder englischer DB-Eintrag wird durch einen deutschen ersetzt.
+	Die englische Sprache ist nach dem Patchvorgang nicht mehr verfügbar.
+	Auch Spieler, die z. B. mit einem englischen Client connecten, finden nur die deutsche Sprache vor.
+	
+
+2. Nutzung der "locales_*" Tabellen: (GTDB_ver_0.8 locales_.sql)
+------------------------------------------
+	Hierbei werden die "locales_*" Tabellen gefüllt!
+	Nach dem Patchvorgang ist es Clientabhängig welche Sprache euch angezeigt wird!
+	Z.B. wenn ihr einen englischen Client habt, wird euch alles in englischer Sprache angezeigt, 
+	     habt ihr jedoch einen deutschen Client werden euch die Texte in deutscher Sprache angezeigt!
+	INFO: Weitere Sprachen (wie Französisch oder Spanisch) sind nur verfügbar wenn ihr euch die entsprechenden 
+	      Patchfiles besorgt (wir sind nur das Projekt für die deutsche Sprache).
+
+Die Extra-Übersetzungen ("areatrigger_tavern", "areatrigger_teleport", "command", "transports") findet ihr in einer 
+extra Datei (GTDB_ver_0.8 extras.sql). Keine dieser Übersetzungen hat multilanguagesupport. 
+Es werden also beim patchen alle englischen Einträge überschrieben!
+
+Der Datei "GTDB_ver_0.8 scripts.sql" übersetzt die Texte von Bossen und NPCs.
+Solltet ihr auch diese Texte übersetzt haben wollen, so müsst ihr die Datei in eure Trinity Datenbank patchen!
+(Hier ist die spätere Anzeige auf Deutsch clientabhängig: 
+Englischer Client = englische Sprache, deutscher Client = deutsche Sprache)
+
+
+#############################################################################
+#####									#####
+#####         GGGGGGGG	  TTTTTTTTTT     DDDDDDD    BBBBBBB 		#####
+#####        GG      	      TT         D     DD   B      B   		#####
+#####       GG    GGG	      TT         D      D   BBBBBBB    		#####
+#####        GG     GG	      TT         D     DD   B      B   		#####
+#####         GGGGGGG	      TT         DDDDDDD    BBBBBBB    		#####
+#####  			      	 CREW					#####
+#############################################################################
