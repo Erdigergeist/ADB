@@ -28,4 +28,3 @@ INSERT INTO spell_script_names (spell_id,ScriptName) VALUES
 
 
 SELECT * FROM creature_template WHERE entry=37098
-
