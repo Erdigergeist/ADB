@@ -13,7 +13,7 @@ UPDATE `creature_template` SET `ScriptName` = "npc_severed_essence" WHERE `entry
 UPDATE `creature_template` SET `unit_flags` = 0 WHERE `entry` = 34800;
 
 /* Uldar XT Spell Scripts */
-INSERT INTO spell_script_names (spell_id,ScriptName) VALUES 
+INSERT IGNORE INTO spell_script_names (spell_id,ScriptName) VALUES 
 (63018, "spell_xt002%"),
 (65121, "spell_xt002%"),
 (63018, "spell_xt002%"),
@@ -24,8 +24,6 @@ INSERT INTO spell_script_names (spell_id,ScriptName) VALUES
 (5369, 'at_RX_214_repair_o_matic_station'),
 (5423, 'at_RX_214_repair_o_matic_station'),
 (64234, 'spell_xt002_gravity_bomb_aura'),
-(63024, 'spell_xt002_gravity_bomb_aura');
-
-
-SELECT * FROM creature_template WHERE entry=37098
+(63024, 'spell_xt002_gravity_bomb_aura'),
+(62374, 'spell_pursued');
 
