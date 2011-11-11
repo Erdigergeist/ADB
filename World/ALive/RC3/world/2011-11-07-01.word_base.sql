@@ -26,4 +26,3 @@ INSERT IGNORE INTO spell_script_names (spell_id,ScriptName) VALUES
 (64234, 'spell_xt002_gravity_bomb_aura'),
 (63024, 'spell_xt002_gravity_bomb_aura'),
 (62374, 'spell_pursued');
-
