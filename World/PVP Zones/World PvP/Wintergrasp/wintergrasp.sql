@@ -53,11 +53,12 @@ INSERT INTO `spell_target_position` (`id`, `target_map`, `target_position_x`, `t
 /* Defender's Portal Activate Proper Spell */
 DELETE FROM `spell_linked_spell` WHERE spell_trigger=54640;
 INSERT INTO `spell_linked_spell` (`spell_trigger`, `spell_effect`, `type`, `comment`) VALUES 
-('54640','54643','0','Defender\'s Portal Activate Proper Spell');
+('54640','54643','0',"Defender's Portal Activate Proper Spell");
 
 /* Temp removed gameobject stopping you getting to the relic
 * 194323 - [Wintergrasp Keep Collision Wall X:5396.209961 Y:2840.010010 Z:432.268005 MapId:571
-* 194162 - [Doodad_WG_Keep_Door01_collision01 X:5397.109863 Y:2841.540039 Z:425.901001 MapId:571]*/
+* 194162 - [Doodad_WG_Keep_Door01_collision01 X:5397.109863 Y:2841.540039 Z:425.901001 MapId:571] 
+*/
 DELETE FROM gameobject WHERE id IN ('194323', '194162');
 
 /* Titan Relic remove */
