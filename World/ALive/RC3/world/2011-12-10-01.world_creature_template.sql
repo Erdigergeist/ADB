@@ -1,0 +1,2 @@
+UPDATE `creature_template` SET `unit_flags` = '32832' WHERE `entry` IN ('36892', '36830', '37638', '37641');
+UPDATE `creature_template` SET `faction_A` = '1885', `faction_H` = '1885' WHERE `entry` = '37643';
