@@ -66,3 +66,5 @@ INSERT INTO `achievement_criteria_data` (`criteria_id`, `type`, `value1`, `value
 ('3936', '16', '141', '0', ''),
 ('3937', '16', '141', '0', ''),
 ('3938', '16', '141', '0', '');
+
+UPDATE `quest_template` SET `SkillOrClassMask` = '0' WHERE `entry` = '11010';
