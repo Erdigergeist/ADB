@@ -1,0 +1,1 @@
+UPDATE `creature_template` SET `Scriptname` = 'npc_harrison_jones' WHERE `entry` = '24358';
