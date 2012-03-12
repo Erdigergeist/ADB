@@ -1,0 +1,1 @@
+UPDATE `creature` SET `unit_flags` = '16384' WHERE `id` = '26620';

@@ -1,0 +1,1 @@
+UPDATE `creature` SET `position_z` = '11.309187' WHERE `entry` = '29308';

@@ -1,0 +1,2 @@
+UPDATE `creature_template` SET `baseattacktime` = 900 WHERE `entry` IN ('37813' ,'38402', '38582', '38583');
+UPDATE `creature_template` SET `flags_extra` = 0 WHERE `entry` IN ('38508', '38596', '38597', '38598');
