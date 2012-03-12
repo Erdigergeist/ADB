@@ -1,0 +1,1 @@
+UPDATE `quest_template` SET `ReqCreatureOrGOId2` = 0, `ReqCreatureOrGOCount2` = 0 WHERE `entry` = 12145;
